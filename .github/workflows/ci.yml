@@ -1,0 +1,45 @@
+name: Main CI
+
+on:
+
+  push:
+    branches:
+      - main
+
+# When pushing in main or merging pull request in main
+#  ${{github.base_ref}} : <empty>
+#  ${{github.ref_name}} : main 
+# When creating pull request in dev* 
+#  ${{github.base_ref}} : main 
+#  ${{github.ref_name}} : 1/merge
+
+jobs:
+
+  syncGitPperforce:
+    runs-on: [test,linux64]
+    container: 
+      image: fr-qafactorydev.europe.altair.com/common-linux64
+      credentials: 
+        username: ${{secrets.DOCKER_REGISTRY_USER}}
+        password: ${{secrets.DOCKER_REGISTRY_PASSWD}}
+      volumes: 
+         - /etc/localtime:/etc/localtime:ro
+
+    steps:
+
+      # Get last git modifications, don't clean before (way to keep persistent obj files)
+      - uses: actions/checkout@v2
+
+      # Set the working dir suffixed with branch name
+      - name: Copy large file
+        run: |
+          mkdir mybins
+          cp photo2.jfif mybins/photo2.jfif
+
+
+      # Upload artifact
+      - name: Upload built artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: mybins
+          path: mybins
