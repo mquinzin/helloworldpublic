@@ -67,7 +67,49 @@ jobs:
           cp photo2.jfif mybins/photo4.jfif
           cp photo2.jfif mybins/photo5.jfif
           cp photo2.jfif mybins/photo6.jfif
-
+          cp photo2.jfif mybins/photo7.jfif
+          cp photo2.jfif mybins/photo8.jfif
+          cp photo2.jfif mybins/photo9.jfif
+          cp photo2.jfif mybins/photo10.jfif
+          cp photo2.jfif mybins/photo11.jfif
+          cp photo2.jfif mybins/photo12.jfif
+          cp photo2.jfif mybins/photo13.jfif
+          cp photo2.jfif mybins/photo14.jfif
+          cp photo2.jfif mybins/photo15.jfif
+          cp photo2.jfif mybins/photo16.jfif
+          cp photo2.jfif mybins/photo17.jfif
+          cp photo2.jfif mybins/photo18.jfif
+          cp photo2.jfif mybins/photo19.jfif
+          cp photo2.jfif mybins/photo20.jfif
+          cp photo2.jfif mybins/photo21.jfif
+          cp photo2.jfif mybins/photo22.jfif
+          cp photo2.jfif mybins/photo23.jfif
+          cp photo2.jfif mybins/photo24.jfif
+          cp photo2.jfif mybins/photo25.jfif          
+          cp photo2.jfif mybins/photo26.jfif
+          cp photo2.jfif mybins/photo27.jfif
+          cp photo2.jfif mybins/photo28.jfif
+          cp photo2.jfif mybins/photo29.jfif
+          cp photo2.jfif mybins/photo30.jfif
+          cp photo2.jfif mybins/photo31.jfif
+          cp photo2.jfif mybins/photo32.jfif
+          cp photo2.jfif mybins/photo33.jfif          
+          cp photo2.jfif mybins/photo34.jfif
+          cp photo2.jfif mybins/photo35.jfif
+          cp photo2.jfif mybins/photo36.jfif
+          cp photo2.jfif mybins/photo37.jfif
+          cp photo2.jfif mybins/photo38.jfif
+          cp photo2.jfif mybins/photo39.jfif
+          cp photo2.jfif mybins/photo40.jfif
+          cp photo2.jfif mybins/photo41.jfif          
+          cp photo2.jfif mybins/photo41.jfif
+          cp photo2.jfif mybins/photo43.jfif
+          cp photo2.jfif mybins/photo44.jfif
+          cp photo2.jfif mybins/photo45.jfif
+          cp photo2.jfif mybins/photo46.jfif
+          cp photo2.jfif mybins/photo47.jfif
+          cp photo2.jfif mybins/photo48.jfif
+          cp photo2.jfif mybins/photo49.jfif                
 
       # Upload artifact
       - name: Upload built artifacts
