@@ -65,6 +65,8 @@ jobs:
           mkdir mybins
           cp photo2.jfif mybins/photo3.jfif
           cp photo2.jfif mybins/photo4.jfif
+          cp photo2.jfif mybins/photo5.jfif
+          cp photo2.jfif mybins/photo6.jfif
 
 
       # Upload artifact
