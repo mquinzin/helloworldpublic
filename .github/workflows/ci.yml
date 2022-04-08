@@ -73,3 +73,35 @@ jobs:
         with:
           name: mybins
           path: mybins
+
+  test3:
+    needs: [test1,test2]
+    runs-on: [test,linux64]
+    container: 
+      image: fr-qafactorydev.europe.altair.com/common-linux64
+      credentials: 
+        username: ${{secrets.DOCKER_REGISTRY_USER}}
+        password: ${{secrets.DOCKER_REGISTRY_PASSWD}}
+      volumes: 
+         - /etc/localtime:/etc/localtime:ro
+
+    steps:
+
+      # Get last git modifications, don't clean before (way to keep persistent obj files)
+      - uses: actions/checkout@v2
+
+      # Set the working dir suffixed with branch name
+      - name: Check
+        run: |
+          ls -l
+
+      # Download artifact
+      - uses: actions/download-artifact@v2
+        with:
+          name: mybins
+          path: mybinsdownloaded   
+
+      # Set the working dir suffixed with branch name
+      - name: Check
+        run: |
+          ls -l mybinsdownloaded/        
